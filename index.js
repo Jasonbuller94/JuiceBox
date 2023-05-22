@@ -1,10 +1,11 @@
-const PORT = 3001;
+require("dotenv").config();
+
+const PORT = 3003;
 const express = require("express");
 const server = express();
 const morgan = require("morgan");
 
 server.use(morgan("dev"));
-
 server.use(express.json());
 
 const apiRouter = require("./api");
